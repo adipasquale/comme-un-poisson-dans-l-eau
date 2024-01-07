@@ -1,0 +1,18 @@
+<article>
+  <h3>{{ episode.title }}</h3>
+
+  <img src="/images/episodes/{{ episode.poster_filename }}" alt="Comme un poisson dans l’eau - {{ episode.title }}">
+
+  {% if episode.audio_filename %}
+    <audio controls>
+      <source src="{{ episode.audio_filename }}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  {% endif %}
+
+  <p>{{ episode.description }}</p>
+
+  <div>
+    <a href="https://www.youtube.com/watch?v={{ episode.youtube_id }}">voir sur youtube</a>
+  </div>
+</article>

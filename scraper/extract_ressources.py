@@ -16,12 +16,12 @@ cur.execute("DROP TABLE IF EXISTS ressources")
 cur.execute("""
     CREATE TABLE ressources (
         slug TEXT,
-        video_id TEXT,
+        youtube_id TEXT,
         title TEXT,
         kind TEXT,
         url TEXT,
         url_domain TEXT,
-        PRIMARY KEY (slug, video_id)
+        PRIMARY KEY (slug, youtube_id)
     )
 """)
 
@@ -34,9 +34,9 @@ def extract_ressources(description):
     return ressources
 
 
-for video in cur.execute("SELECT * FROM videos").fetchall():
-    video_json = json.loads(video["json"])
-    ressources = extract_ressources(video_json["snippet"]["description"])
+for episode in cur.execute("SELECT * FROM episodes").fetchall():
+    youtube_json = json.loads(episode["youtube_json"])
+    ressources = extract_ressources(youtube_json["snippet"]["description"])
     logging.info(f"Inserting {len(ressources)} ressources into the db...")
     for ressource in ressources:
         url = None
@@ -78,7 +78,7 @@ for video in cur.execute("SELECT * FROM videos").fetchall():
         slug = slugify(title or url)
 
         cur.execute(
-            "INSERT INTO ressources (slug, video_id, title, url, url_domain, kind) VALUES (?, ?, ?, ?, ?, ?)",
+            "INSERT INTO ressources (slug, youtube_id, title, url, url_domain, kind) VALUES (?, ?, ?, ?, ?, ?)",
             (slug, video["id"], title, url, url_domain, kind)
         )
         con.commit()

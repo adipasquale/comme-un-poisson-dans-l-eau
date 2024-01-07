@@ -2,4 +2,12 @@
 layout: default
 ---
 
-Accueil
+<p>
+  Ce site présente les
+  <a href="/episodes">{{ db.episodes.length }} épisodes</a> du podcast ainsi que les {{ db.ressources.lenght }} références citées
+  (<a href="/livres">{{ db.books.length }} livres</a>) pour qu’elles soient facilement accessibles
+</p>
+
+<h2>Dernier épisode</h2>
+
+{%- set lastEpisode = db.episodes[-1] %}

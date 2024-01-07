@@ -1,0 +1,35 @@
+article .book {
+  display: flex;
+
+  img {
+    margin: 1rem;
+  }
+}
+
+header h1::after, footer::before {
+	background: url(../images/fish.png) repeat-x center;
+	display: block;
+	height: 50px;
+	content: '';
+}
+
+footer {
+	background: var(--nc-bg-2);
+	border-bottom: 1px solid var(--nc-bg-3);
+	padding: 2rem 1.5rem;
+
+	/* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
+
+	margin: 10rem calc(50% - 50vw) 2rem;
+
+	/* Shorthand for:
+
+	margin-top: -2rem;
+	margin-bottom: 2rem;
+
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw); */
+
+	padding-left: calc(50vw - 50%);
+	padding-right: calc(50vw - 50%);
+}

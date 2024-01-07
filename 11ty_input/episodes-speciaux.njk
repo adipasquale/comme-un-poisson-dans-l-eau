@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+<h2>Liste des {{ db.specials.length }} épisodes spéciaux</h2>
+
+{% for episode in db.specials %}
+  {% include "episode-article.njk" %}
+{% endfor %}

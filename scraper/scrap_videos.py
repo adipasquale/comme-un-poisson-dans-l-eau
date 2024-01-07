@@ -11,9 +11,9 @@ con = get_connection()
 cur = con.cursor()
 
 cur.execute("DROP TABLE IF EXISTS ressources")
-cur.execute("DROP TABLE IF EXISTS videos")
+cur.execute("DROP TABLE IF EXISTS episodes")
 cur.execute(
-    "CREATE TABLE videos (id TEXT, json TEXT, title TEXT)")
+    "CREATE TABLE videos (youtube_id TEXT, youtube_json TEXT, title TEXT)")
 
 channel_id = "UCfzKqH_Ft8_8yFrGzG3x9-g"
 api_key = os.getenv("GOOGLE_API_KEY")
@@ -42,7 +42,7 @@ while True:
     for video in data["items"]:
         title = video["snippet"]["title"]
         cur.execute(
-            "INSERT INTO videos (id, json, title) VALUES (?, ?, ?)", (video["id"], json.dumps(video), title))
+            "INSERT INTO videos (youtube_id, youtube_json, title) VALUES (?, ?, ?)", (video["id"], json.dumps(video), title))
         con.commit()
 
     if "nextPageToken" in data:

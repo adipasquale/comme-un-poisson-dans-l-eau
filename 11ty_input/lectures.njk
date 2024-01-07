@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+<h2>Liste des {{ db.readings.length }} lectures</h2>
+
+{% for episode in db.readings %}
+  {% include "episode-article.njk" %}
+{% endfor %}

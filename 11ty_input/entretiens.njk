@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+<h2>Liste des {{ db.interviews.length }} entretiens</h2>
+
+{% for episode in db.interviews %}
+  {% include "episode-article.njk" %}
+{% endfor %}
