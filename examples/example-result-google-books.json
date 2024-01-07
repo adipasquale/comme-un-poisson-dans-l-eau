@@ -1,0 +1,881 @@
+{
+  "kind": "books#volumes",
+  "totalItems": 12614,
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "qxXUAgAAQBAJ",
+      "etag": "JJCzdbkHfOk",
+      "selfLink": "https://content-books.googleapis.com/books/v1/volumes/qxXUAgAAQBAJ",
+      "volumeInfo": {
+        "title": "Vivre avec les animaux",
+        "subtitle": "Une utopie pour le XXIe siècle",
+        "authors": [
+          "Jocelyne PORCHER"
+        ],
+        "publisher": "La Découverte",
+        "publishedDate": "2014-02-20",
+        "description": "Quels sont les enjeux de notre relation aux animaux d'élevage et, plus largement, aux animaux domestiques ? Si Le rapport aux animaux est un des meilleurs indices de notre degré de civilisation et d'humanité, la capacité à vivre dignement avec eux en évitant leur mise à mort industrielle pourrait se révéler comme une des plus belles utopies du XXI e siècle. Dans notre monde radicalement artificialisé, seuls les animaux, en nous rappelant ce qu'a été la nature, nous permettront peut-être de nous souvenir de notre propre humanité. Mais saurons-nous vivre avec eux ? Le voulons-nous encore ? Car l'abattage de masse des animaux, considérés comme simples éléments des \" productions animales \", leur inflige une terreur et une souffrance insoutenables, tout en désespérant les éleveurs. Qu'est-ce que l'élevage ? Quelles différences entre \" élevage \" et \" productions animales \" ? Quelle est la place de la mort dans le travail avec les animaux ? Peut-on améliorer leur sort dans les systèmes industriels ? Faut-il \" libérer les animaux \" comme le proposent certains philosophes ? En répondant ici à ces questions, Jocelyne Porcher explique en quoi la capacité des hommes à coexister pacifiquement dépend de leur capacité à vivre en paix et dignement avec les animaux. Et pourquoi, dès lors, sauver l'élevage en évitant son assujettissement au système d'exploitation et de mise à mort industrielles pourrait être une des plus belles utopies du XXIe siècle.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9782707182326"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "270718232X"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 212,
+        "printType": "BOOK",
+        "categories": [
+          "Social Science"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.1.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=qxXUAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=qxXUAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "fr",
+        "previewLink": "http://books.google.fr/books?id=qxXUAgAAQBAJ&printsec=frontcover&dq=Vivre+avec+les+animaux.+Une+utopie+pour+le+XXI%C3%A8me+si%C3%A8cle+-+Jocelyne+Porcher&hl=&cd=1&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=qxXUAgAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=qxXUAgAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 8.99,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 8.99,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=qxXUAgAAQBAJ&rdid=book-qxXUAgAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 8990000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 8990000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Vivre_avec_les_animaux-sample-epub.acsm?id=qxXUAgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=qxXUAgAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "En répondant ici à ces questions, Jocelyne Porcher explique en quoi la capacité des hommes à coexister pacifiquement dépend de leur capacité à vivre en paix et dignement avec les animaux."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "qylaEAAAQBAJ",
+      "etag": "BPjDQhMXq0s",
+      "selfLink": "https://content-books.googleapis.com/books/v1/volumes/qylaEAAAQBAJ",
+      "volumeInfo": {
+        "title": "Living and working with giants",
+        "subtitle": "a multispecies ethnography of the Khamtis and elephants in Northeast India",
+        "authors": [
+          "Nicolas Lainé"
+        ],
+        "publisher": "Publications scientifiques du Muséum",
+        "publishedDate": "2022-01-20",
+        "description": "This book proposes a unique and immersive multispecies ethnography of the cooperative interaction between the Khamti and elephants in Northeast India. It is based on extended research fieldwork, which attempts not only to describe how the Khamti establish working relationships with elephants, but also considers the involvement of animals in this joint-venture. Through a step-by-step approach, the book addresses different aspects of the interspecies working unit from the beginning of Khamti-elephant association through to its evolvement at work. Back and forth from village to forest, through rich and meticulous descriptions, Nicolas Lainé brings the reader up close in following the capture of a juvenile forest elephant, documenting its transformation into a village elephant. In this unique way, Lainé shows how the initial human-animal bonds evolve and persist at work as a two-way, reciprocated process. The adopted multi-disciplinary approach allows thinking the human-elephant working unit in terms of intersubjective engagement. In its analysis, Nicolas Lainé took into consideration of the cognitive capacities and corporeal capabilities of humans and elephants, their reciprocal influences, and the representations that arise from specific contexts in which interspecies communication and collaboration is manifest. Hence, the proposition on interspecies labour sheds new light not only with respect to what we know (or we think we know) about animals, but also modifies our idea of domestication. At the workplace, humans and animals not only partake in a common world, but that they produce this world together and transform it through their collaboration. Beyond this, the book shows how the quality of shared living conditions for both animal and human are intrinsically linked. It opens doors to a new approach of species conservation and the realization of a very current and widespread aspiration: that of extending the mutually beneficial modalities of existence of humans and animals in their shared environment.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9782856539293"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "2856539297"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 284,
+        "printType": "BOOK",
+        "categories": [
+          "Social Science"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=qylaEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=qylaEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.fr/books?id=qylaEAAAQBAJ&pg=PA255&dq=Vivre+avec+les+animaux.+Une+utopie+pour+le+XXI%C3%A8me+si%C3%A8cle+-+Jocelyne+Porcher&hl=&cd=2&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=qylaEAAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=qylaEAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 14.99,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 14.99,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=qylaEAAAQBAJ&rdid=book-qylaEAAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 14990000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 14990000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Living_and_working_with_giants-sample-epub.acsm?id=qylaEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Living_and_working_with_giants-sample-pdf.acsm?id=qylaEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=qylaEAAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "... \u003cb\u003ePorcher Jocelyne\u003c/b\u003e 2013 — “Faire société \u003cb\u003eavec\u003c/b\u003e les anianimals and the politics of colonial sensibilities, c.18401950 ... \u003cb\u003eJocelyne\u003c/b\u003e &amp; Estebanez Jean (eds) 2019 — An- imal labour. A new perspective on human-\u003cb\u003eanimal\u003c/b\u003e relamattan, 372 p&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "6swiCwAAQBAJ",
+      "etag": "NXohp7vrDWw",
+      "selfLink": "https://content-books.googleapis.com/books/v1/volumes/6swiCwAAQBAJ",
+      "volumeInfo": {
+        "title": "Le lait, la vache et le citadin",
+        "subtitle": "Du XVIIe au XXe siècle",
+        "authors": [
+          "Pierre-Olivier Fanica"
+        ],
+        "publisher": "Quae",
+        "publishedDate": "2008-11-19",
+        "description": "Retraçant l'histoire de la production laitière, l'auteur montre comment, sous l'effet de la mode au XVIIe siècle, le lait est devenu un produit courant en même temps que le café. Il présente l'organisation de la production laitière, assurée par les fermes des laitiers-cultivateurs, ainsi que par les étables des laitiers-nourrisseurs situées à l'intérieur de la ville ou dans la proche banlieue. Ce livre décrit le long et difficile chemin qui a permis au lait de devenir l'aliment sûr qu'il est aujourd'hui. Si la lutte contre les fraudes est ancienne, l'application des normes d'hygiène ne s'est en effet imposée que récemment.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9782759213467"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "2759213463"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 520,
+        "printType": "BOOK",
+        "categories": [
+          "Social Science"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "3.5.4.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=6swiCwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=6swiCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "fr",
+        "previewLink": "http://books.google.fr/books?id=6swiCwAAQBAJ&printsec=frontcover&dq=Vivre+avec+les+animaux.+Une+utopie+pour+le+XXI%C3%A8me+si%C3%A8cle+-+Jocelyne+Porcher&hl=&cd=3&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=6swiCwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=6swiCwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 33.99,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 33.99,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=6swiCwAAQBAJ&rdid=book-6swiCwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 33990000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 33990000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Le_lait_la_vache_et_le_citadin-sample-epub.acsm?id=6swiCwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Le_lait_la_vache_et_le_citadin-sample-pdf.acsm?id=6swiCwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=6swiCwAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Retraçant l&#39;histoire de la production laitière, l&#39;auteur montre comment, sous l&#39;effet de la mode au XVIIe siècle, le lait est devenu un produit courant en même temps que le café."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "-6RhDwAAQBAJ",
+      "etag": "zWwE9kZ/oqA",
+      "selfLink": "https://content-books.googleapis.com/books/v1/volumes/-6RhDwAAQBAJ",
+      "volumeInfo": {
+        "title": "Innovation et développement dans les systèmes agricoles et alimentaires",
+        "authors": [
+          "Guy Faure",
+          "Yuna Chiffoleau",
+          "Frédéric Goulet",
+          "Ludovic Temple",
+          "Jean-Marc Touzard"
+        ],
+        "publisher": "Quae",
+        "publishedDate": "2018-06-28",
+        "description": "L’innovation est souvent présentée comme l’un des principaux leviers pour promouvoir un développement plus durable et plus inclusif. Dans les domaines de l’agriculture et de l’alimentation, l’innovation est marquée par des spécificités liées à sa relation à la nature, mais aussi à la grande diversité d’acteurs concernés, depuis les agriculteurs jusqu’aux consommateurs, en passant par les services de recherche et de développement. L’innovation émerge des interactions entre ces acteurs, qui mobilisent des ressources et produisent des connaissances dans des dispositifs collaboratifs, afin de générer des changements. Elle recouvre des domaines aussi variés que les pratiques de production, l’organisation des marchés, ou les pratiques alimentaires. L’innovation est reliée aux grands enjeux de développement : innovation agro-écologique, innovation sociale, innovation territoriale, etc. Cet ouvrage porte un regard sur l’innovation dans les systèmes agricoles et alimentaires. Il met un accent particulier sur l’accompagnement de l’innovation, en interrogeant les méthodes et les organisations, et sur l’évaluation de l’innovation au regard de différents critères.Il s’appuie sur des réflexions portées par différentes disciplines scientifiques, sur des travaux de terrain conduits tant en France que dans de nombreux pays du Sud, et enfin sur les expériences acquises en accompagnant des acteurs qui innovent. Il combine des synthèses sur l’innovation et des études de cas emblématiques pour illustrer les propos. L’ouvrage est destiné aux enseignants, professionnels, étudiants et chercheurs.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9782759228133"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "2759228134"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 263,
+        "printType": "BOOK",
+        "categories": [
+          "Business & Economics"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.9.9.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=-6RhDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=-6RhDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "fr",
+        "previewLink": "http://books.google.fr/books?id=-6RhDwAAQBAJ&printsec=frontcover&dq=Vivre+avec+les+animaux.+Une+utopie+pour+le+XXI%C3%A8me+si%C3%A8cle+-+Jocelyne+Porcher&hl=&cd=4&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=-6RhDwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=-6RhDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 0,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 0,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=-6RhDwAAQBAJ&rdid=book--6RhDwAAQBAJ&rdot=1&source=gbs_api"
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "ALL_PAGES",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Innovation_et_d%C3%A9veloppement_dans_les_sy-sample-epub.acsm?id=-6RhDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Innovation_et_d%C3%A9veloppement_dans_les_sy-sample-pdf.acsm?id=-6RhDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=-6RhDwAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "L’innovation est souvent présentée comme l’un des principaux leviers pour promouvoir un développement plus durable et plus inclusif."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "6-EICwAAQBAJ",
+      "etag": "mSaU8ar1g1g",
+      "selfLink": "https://content-books.googleapis.com/books/v1/volumes/6-EICwAAQBAJ",
+      "volumeInfo": {
+        "title": "Éleveurs et animaux, réinventer le lien",
+        "authors": [
+          "Jocelyne Porcher"
+        ],
+        "publisher": "PUF",
+        "publishedDate": "2014-07-01T00:00:00+02:00",
+        "description": "SOMMAIRE IntroductionChap I -- L'élevage en France, plus de 30 ans de course à la performance quantitative ; le bien-être animal, point de convergence de nouveaux enjeux sociaux, économiques et scientifiquesLe bien-être des animaux d'élevage, l'affaire d'une société -- Le bien-être animal, une question à choix multiples pour la zootechnieChap II -- Bien-être animal ou bien-être des éleveurs et des animaux dans le travail, petites différences et grandes conséquences dans la façon de poser le problèmeChap III -- Travail, affectivité, communication, comportement animal, des cadres d'analyse aux hypothèses de rechercheEleveurs et zootechniciens, de l'élevage aux productions animales -- C'est quoi le travail ? -- La relation à l'animal d'élevage, l'amour d'abord ? -- Communication et comportement animal -- Représentations et attitudes -- L'élevage, un travail de mise en relation ? -- De l'écoute intersubjective des éleveurs à la validation d'affirmations objectivéesChap 4 : Les représentations de l'animal et de soi dans le travail en fonction de l'espèce et du système de production, résultats thématiques des entretiensChap V -- Représentations et attitudes impliquant la part affective et le rapport individuel et social au travail, valider et généraliser les résultats des entretiensChap VI -- Le travail en élevage entre plaisir et souffrance, résultat des enquêtes et analyses statistiquesChap VII -- Discussion des résultatsChap VIII -- Être éleveur c'est créer des liens, retour sur les cadres d'analyse et les hypothèses de travailConclusion : L'élevage doit mettre en place aujourd'hui de nouveaux rapports de sociabilité entre les animaux et les hommes",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9782130637769"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "2130637760"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 340,
+        "printType": "BOOK",
+        "categories": [
+          "Social Science"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.4.4.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=6-EICwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=6-EICwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "fr",
+        "previewLink": "http://books.google.fr/books?id=6-EICwAAQBAJ&printsec=frontcover&dq=Vivre+avec+les+animaux.+Une+utopie+pour+le+XXI%C3%A8me+si%C3%A8cle+-+Jocelyne+Porcher&hl=&cd=5&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=6-EICwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=6-EICwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 19.99,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 19.99,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=6-EICwAAQBAJ&rdid=book-6-EICwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 19990000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 19990000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/%C3%89leveurs_et_animaux_r%C3%A9inventer_le_lien-sample-epub.acsm?id=6-EICwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/%C3%89leveurs_et_animaux_r%C3%A9inventer_le_lien-sample-pdf.acsm?id=6-EICwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=6-EICwAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "SOMMAIRE IntroductionChap I -- L&#39;élevage en France, plus de 30 ans de course à la performance quantitative ; le bien-être animal, point de convergence de nouveaux enjeux sociaux, économiques et scientifiquesLe bien-être des animaux d ..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "Pfv_DwAAQBAJ",
+      "etag": "uZzYQKLL+Sc",
+      "selfLink": "https://content-books.googleapis.com/books/v1/volumes/Pfv_DwAAQBAJ",
+      "volumeInfo": {
+        "title": "La santé globale au prisme de l'analyse des politiques publiques",
+        "authors": [
+          "Sébastien Gardon",
+          "Amandine Gautier",
+          "Gwenola le Naour"
+        ],
+        "publisher": "Quae",
+        "publishedDate": "2020-10-05",
+        "description": "Cet ouvrage fait le lien entre l’analyse des politiques publiques et les questionnements sur les problématiques de santé publique, intégrant notamment les enjeux de santé publique vétérinaire et agronomique. Les cas présentés concernent des problématiques historiques (crises sanitaires, maillage territorial de la gestion du sanitaire, profession vétérinaire, protection animale) et des questions auxquelles sont confrontées les services (la nouvelle gestion publique, les relations hommes-animaux, les défis environnementaux).",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9782759232598"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "275923259X"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 248,
+        "printType": "BOOK",
+        "categories": [
+          "Technology & Engineering"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "0.4.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=Pfv_DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=Pfv_DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "fr",
+        "previewLink": "http://books.google.fr/books?id=Pfv_DwAAQBAJ&printsec=frontcover&dq=Vivre+avec+les+animaux.+Une+utopie+pour+le+XXI%C3%A8me+si%C3%A8cle+-+Jocelyne+Porcher&hl=&cd=6&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=Pfv_DwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=Pfv_DwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 0,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 0,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=Pfv_DwAAQBAJ&rdid=book-Pfv_DwAAQBAJ&rdot=1&source=gbs_api"
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "ALL_PAGES",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/La_sant%C3%A9_globale_au_prisme_de_l_analyse-sample-pdf.acsm?id=Pfv_DwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=Pfv_DwAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Cet ouvrage fait le lien entre l’analyse des politiques publiques et les questionnements sur les problématiques de santé publique, intégrant notamment les enjeux de santé publique vétérinaire et agronomique."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "H8llQgAACAAJ",
+      "etag": "9VGJwbzrZX0",
+      "selfLink": "https://content-books.googleapis.com/books/v1/volumes/H8llQgAACAAJ",
+      "volumeInfo": {
+        "title": "L'élevage sous l'Ancien Régime",
+        "subtitle": "les fondements agraires de la France moderne, XVIe-XVIIIe siècles",
+        "authors": [
+          "Jean-Marc Moriceau"
+        ],
+        "publisher": "Sedes",
+        "publishedDate": "1999",
+        "description": "Sous l'ANCIEN RÉGIME, bien davantage que la charrue ou l'araire, le bétail accompagnait la vie des paysans. Point de système de culture où il ne tînt une place inévitable, pour assurer le trait et le fumier mais aussi pour diversifier les revenus. Quelle était son rôle dans la société et l'économie d'Ancien Régime ? Comment pratiquait-on l'élevage selon les catégories animales ? Quelles étaient les ressources disponibles et comment furent-elles gérées selon les différents systèmes agraires ? Facteur de production de première importance, le cheptel vif était par ailleurs un marqueur social. De la chèvre, du cochon ou de la vache du pauvre aux gros troupeaux des éleveurs capitalistes, l'utilisation des animaux signalait la hiérarchie sociale au village. Il en résultait des conflits permanents dans l'utilisation du sol, l'organisation des assolements et la gestion des espaces non cultivés. Les choix opérés, qui contribuaient à modeler l'environnement rural, aiguisaient des concurrences multiples, entre individus et communautés, entre catégories animales, entre villages voisins, entre administration publique et traditions locales. À travers ce premier effort de synthèse - 450 communes citées, couvrant l'ensemble des régions - dans un domaine sur lequel bien des réalités premières étaient à préciser, l'auteur insiste sur les facteurs structurels de l'économie rurale du XVe au XVIIIe siècle. Mais il s'interroge aussi sur les conditions d'une évolution vers des spécialisations inégales selon des étapes et des modalités qui restent largement à explorer. Elles sont à la base des équilibres entre la société rurale française et son environnement, si contestés aujourd'hui.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "2718192003"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9782718192000"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 256,
+        "printType": "BOOK",
+        "categories": [
+          "Agriculture"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=H8llQgAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=H8llQgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "fr",
+        "previewLink": "http://books.google.fr/books?id=H8llQgAACAAJ&dq=Vivre+avec+les+animaux.+Une+utopie+pour+le+XXI%C3%A8me+si%C3%A8cle+-+Jocelyne+Porcher&hl=&cd=7&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=H8llQgAACAAJ&dq=Vivre+avec+les+animaux.+Une+utopie+pour+le+XXI%C3%A8me+si%C3%A8cle+-+Jocelyne+Porcher&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/L_%C3%A9levage_sous_l_Ancien_R%C3%A9gime.html?hl=&id=H8llQgAACAAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=H8llQgAACAAJ&hl=&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Sous l&#39;Ancien Régime, le cheptel était un marqueur social."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "QxMfYoK4NLMC",
+      "etag": "gdnwnn6dWYs",
+      "selfLink": "https://content-books.googleapis.com/books/v1/volumes/QxMfYoK4NLMC",
+      "volumeInfo": {
+        "title": "La méthode IDEA",
+        "subtitle": "indicateurs de durabilité des exploitations agricoles",
+        "authors": [
+          "Lionel Vilain"
+        ],
+        "publisher": "Educagri Editions",
+        "publishedDate": "2008",
+        "description": "La méthode IDEA est une méthode globale d'évaluation de la durabilité des systèmes agricoles selon les axes agroécologique, socioterritorial et économique. Elle constitue un outil d'auto-évaluation qui montre les faiblesses techniques et les voies de progression possibles.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9782844446695"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "2844446698"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 186,
+        "printType": "BOOK",
+        "categories": [
+          "Agriculture durable"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.2.2.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=QxMfYoK4NLMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=QxMfYoK4NLMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "fr",
+        "previewLink": "http://books.google.fr/books?id=QxMfYoK4NLMC&printsec=frontcover&dq=Vivre+avec+les+animaux.+Une+utopie+pour+le+XXI%C3%A8me+si%C3%A8cle+-+Jocelyne+Porcher&hl=&cd=8&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=QxMfYoK4NLMC&dq=Vivre+avec+les+animaux.+Une+utopie+pour+le+XXI%C3%A8me+si%C3%A8cle+-+Jocelyne+Porcher&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/La_m%C3%A9thode_IDEA.html?hl=&id=QxMfYoK4NLMC"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/La_m%C3%A9thode_IDEA-sample-pdf.acsm?id=QxMfYoK4NLMC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=QxMfYoK4NLMC&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "La méthode IDEA est une méthode globale d&#39;évaluation de la durabilité des systèmes agricoles selon les axes agroécologique, socioterritorial et économique."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "LK6ljwEACAAJ",
+      "etag": "RKav8z29MJw",
+      "selfLink": "https://content-books.googleapis.com/books/v1/volumes/LK6ljwEACAAJ",
+      "volumeInfo": {
+        "title": "Le droit animalier",
+        "authors": [
+          "Jean-Pierre Marguénaud",
+          "Florence Burgat",
+          "Jacques Leroy"
+        ],
+        "publishedDate": "2016-03-09",
+        "description": "Qu'est-ce que le droit animalier ? Ce corpus de textes et de décisions de justice concernant les animaux dans le droit positif, par conséquent distinct de la notion philosophique de droits des animaux, est éclairé par les sources qui ont contribué à son édification. Ses enjeux philosophiques, touchant entre autres à la spécificité de l'animal, au droit naturel, à la relation entre devoirs et droits, d'une part, et ses enjeux réflexifs sur le Droit en général, d'autre part, occupent la première partie. Les deux autres parties du livres s'attachent à une analyse détaillée des textes comme des décisions de justice selon les deux axes, opposés, qui nourrissent le droit animalier : un droit contre les animaux et un droit pour les animaux. L'examen du droit animalier révèle une profonde hostilité de l'homme à l'égard des animaux, aujourd'hui de plus en plus clairement remise en cause. Au-delà des aspects strictement juridiques, une contribution à l'anthropologie se dessine dans l'examen de la condition que le droit réserve aux animaux.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "213063060X"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9782130630609"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 264,
+        "printType": "BOOK",
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "language": "fr",
+        "previewLink": "http://books.google.fr/books?id=LK6ljwEACAAJ&dq=Vivre+avec+les+animaux.+Une+utopie+pour+le+XXI%C3%A8me+si%C3%A8cle+-+Jocelyne+Porcher&hl=&cd=9&source=gbs_api",
+        "infoLink": "http://books.google.fr/books?id=LK6ljwEACAAJ&dq=Vivre+avec+les+animaux.+Une+utopie+pour+le+XXI%C3%A8me+si%C3%A8cle+-+Jocelyne+Porcher&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Le_droit_animalier.html?hl=&id=LK6ljwEACAAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=LK6ljwEACAAJ&hl=&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "La 4e de couverture indique : &quot;Faut-il faire du droit animalier une discipline à part entière ?"
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "YuQREAAAQBAJ",
+      "etag": "rWc8F3zkEFA",
+      "selfLink": "https://content-books.googleapis.com/books/v1/volumes/YuQREAAAQBAJ",
+      "volumeInfo": {
+        "title": "Dictionnaire des biens communs",
+        "authors": [
+          "Judith Rochfeld",
+          "Marie Cornu",
+          "Fabienne Orsi"
+        ],
+        "publisher": "PUF",
+        "publishedDate": "2021-01-06T00:00:00+01:00",
+        "description": "Que sont les « communs » ? La notion ne cesse d’être mobilisée aujourd’hui. Elle traduit le constat d’une évolution des pratiques sociales : les biens seraient davantage mis en partage. Logiciel libre, habitat participatif, vélos ou voitures en usage successif, entreprise qui serait le « bien commun » de toutes les parties prenantes : la notion envahit tous les domaines de la vie, allant de la culture, l’environnement et l’urbanisme à la santé, au travail et à la technologie. Si la mobilisation est intense, c’est que la notion autorise à penser le changement social sur la base d’un réinvestissement du collectif, des communautés, du partage et de l’usage. Elle réinterprète les valeurs fondatrices des sociétés contemporaines. Ainsi, les communs sont irrémédiablement liés au rôle de l’État, de la propriété et de la démocratie. Ils sont à la fois une réflexion théorique, un débat politique et un lieu d’expériences citoyennes. Ce dictionnaire, placé à mi-chemin entre le vocabulaire et l’encyclopédie, est un véritable outil de compréhension du phénomène dans les différents champs où il intervient. Deuxième édition",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9782130817697"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "2130817696"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 1836,
+        "printType": "BOOK",
+        "categories": [
+          "Social Science"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.4.5.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=YuQREAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=YuQREAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "fr",
+        "previewLink": "http://books.google.fr/books?id=YuQREAAAQBAJ&printsec=frontcover&dq=Vivre+avec+les+animaux.+Une+utopie+pour+le+XXI%C3%A8me+si%C3%A8cle+-+Jocelyne+Porcher&hl=&cd=10&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=YuQREAAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=YuQREAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "FR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 32.99,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 32.99,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=YuQREAAAQBAJ&rdid=book-YuQREAAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 32990000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 32990000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "FR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Dictionnaire_des_biens_communs-sample-epub.acsm?id=YuQREAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.fr/books/download/Dictionnaire_des_biens_communs-sample-pdf.acsm?id=YuQREAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=YuQREAAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Que sont les « communs » ?"
+      }
+    }
+  ]
+}

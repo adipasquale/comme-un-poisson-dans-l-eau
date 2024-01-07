@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<h2>Livres</h2>
+
+{% for resource in ressources.livres %}
+  <article>
+    <h3>{{ resource.title }}</h3>
+    <p>{{ resource.kind }}</p>
+    {% if resource.url %}
+      <a href="{{ resource.url }}">{{ resource.url }}</a>
+    {% endif %}
+  </article>
+{% endfor %}
