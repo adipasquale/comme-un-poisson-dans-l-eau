@@ -22,7 +22,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _11ty_output
+          path: 11ty_output
 
   deploy:
     environment:
