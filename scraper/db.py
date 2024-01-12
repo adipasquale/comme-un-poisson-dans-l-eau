@@ -1,4 +1,5 @@
 import sqlite3
+import os
 
 
 def dict_factory(cursor, row):
@@ -7,6 +8,8 @@ def dict_factory(cursor, row):
 
 
 def get_connection():
-    con = sqlite3.connect("../commeunpoissondansleau.db")
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    db_path = os.path.join(current_dir, "../commeunpoissondansleau.db")
+    con = sqlite3.connect(db_path)
     con.row_factory = dict_factory
     return con
