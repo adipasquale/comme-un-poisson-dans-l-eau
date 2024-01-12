@@ -1,8 +1,12 @@
 import sqlite3 from 'sqlite3'
 import { open } from 'sqlite'
+import { fileURLToPath } from 'url';
+import path from 'path';
+
 
 export default async function () {
-  const db = await open({ filename: 'commeunpoissondansleau.db', driver: sqlite3.Database })
+  const dbPath = path.resolve(fileURLToPath(import.meta.url), '../../../commeunpoissondansleau.db');
+  const db = await open({ filename: dbPath, driver: sqlite3.Database })
   const ressources = await db.all('SELECT * FROM ressources')
   const books = await db.all('SELECT * FROM ressources WHERE kind="book"')
 
