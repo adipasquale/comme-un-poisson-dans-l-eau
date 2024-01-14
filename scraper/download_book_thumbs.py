@@ -17,30 +17,31 @@ try:
 except sqlite3.OperationalError:
     pass
 
-for ressource in cur.execute("SELECT * FROM ressources WHERE kind='book' AND google_books_json IS NOT NULL").fetchall():
+for ressource in cur.execute("SELECT * FROM ressources WHERE kind='book' AND google_books_json IS NOT NULL AND google_books_json != ''").fetchall():
     try:
         data = json.loads(ressource["google_books_json"])
     except json.decoder.JSONDecodeError:
-        logging.warning(f"could not parse json for {ressource['slug']} #{
-                        ressource['video_id']} : {ressource['google_books_json']}")
+        logging.warning(f"could not parse json for {ressource['slug']} : {
+                        ressource['google_books_json']}")
         continue
 
     url = data["volumeInfo"].get("imageLinks", {}).get("thumbnail")
     if url is None:
         continue
+
     ids = [ressource.get(id) or "" for id in ['authors', 'book_title', 'isbn']]
     filename = slugify(" ".join(ids)) + ".jpg"
     path = f"../images/books/{filename}"
 
-    # if os.path.exists(path):
-    #     continue
+    if os.path.exists(path):
+        continue
 
-    # logging.info(f"downloading {url} to {path}...")
-    # with open(path, "wb") as f:
-    #     f.write(requests.get(url).content)
+    logging.info(f"downloading {url} to {path}...")
+    with open(path, "wb") as f:
+        f.write(requests.get(url).content)
 
     cur.execute(
-        "UPDATE ressources SET book_thumb = ? WHERE slug = ? and video_id = ?",
-        (filename, ressource["slug"], ressource["video_id"])
+        "UPDATE ressources SET book_thumb = ? WHERE slug = ?",
+        (filename, ressource["slug"])
     )
     con.commit()

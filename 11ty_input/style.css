@@ -1,9 +1,21 @@
 article .book {
+	margin-top: 1rem;
   display: flex;
 
+	.thumb {
+		width: 120px;
+		flex-shrink: 0;
+		flex-grow: 0;
+		padding: 0 .5rem;
+	}
   img {
-    margin: 1rem;
+		width: 100%;
   }
+	.content {
+		h4 {
+			padding-top: 0;
+		}
+	}
 }
 
 header h1::after, footer::before {

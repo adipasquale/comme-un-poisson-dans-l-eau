@@ -11,32 +11,23 @@ logging.basicConfig(level=logging.INFO)
 con = get_connection()
 cur = con.cursor()
 
-try:
-    cur.execute("ALTER TABLE ressources ADD COLUMN authors TEXT")
-    cur.execute("ALTER TABLE ressources ADD COLUMN book_title TEXT")
-    cur.execute("ALTER TABLE ressources ADD COLUMN book_subtitle TEXT")
-except sqlite3.OperationalError:
-    pass
-
-for ressource in cur.execute("SELECT * FROM ressources WHERE kind='book' AND google_books_json IS NOT NULL AND (authors IS NULL OR book_title IS NULL)").fetchall():
+for ressource in cur.execute("SELECT * FROM ressources WHERE kind='book' AND isbn IS NOT NULL AND google_books_json IS NOT NULL AND (authors IS NULL OR authors = '' OR book_title IS NULL OR book_title = '')").fetchall():
     data = json.loads(ressource["google_books_json"])
-
     authors = data["volumeInfo"].get("authors") or None
     authors_str = ", ".join(authors) if authors else None
     title = data["volumeInfo"].get("title") or None
     subtitle = data["volumeInfo"].get("subtitle") or None
     logging.info(
-        f"updating {ressource['slug']} #{ressource['video_id']} with title "
+        f"updating {ressource['title']}  with title "
         f"{title}, subtitle {subtitle} and authors {authors_str}"
     )
     cur.execute(
-        "UPDATE ressources SET authors = ?, book_title = ?, book_subtitle = ? WHERE slug = ? and video_id = ?",
+        "UPDATE ressources SET authors = ?, book_title = ?, book_subtitle = ? WHERE isbn = ?",
         (
             authors_str,
             title,
             subtitle,
-            ressource["slug"],
-            ressource["video_id"]
+            ressource["isbn"]
         )
     )
     con.commit()

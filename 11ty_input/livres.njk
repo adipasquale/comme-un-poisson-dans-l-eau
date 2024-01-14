@@ -23,6 +23,16 @@ layout: default
         {% endif %}
         <div><small>{{ ressource.isbn }}</small></div>
         <div><small><i>{{ ressource.title }}</i></small></div>
+        <div>
+          Cité dans les épisodes
+          <ul>
+            {% for episode in ressource.episodes %}
+              <li>
+                {{ episode.title }}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
     </div>
   </article>

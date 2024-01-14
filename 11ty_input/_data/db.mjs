@@ -8,7 +8,14 @@ export default async function () {
   const dbPath = path.resolve(fileURLToPath(import.meta.url), '../../../commeunpoissondansleau.db');
   const db = await open({ filename: dbPath, driver: sqlite3.Database })
   const ressources = await db.all('SELECT * FROM ressources')
-  const books = await db.all('SELECT * FROM ressources WHERE kind="book"')
+  const books = await db.all(`
+    SELECT ressources.*, GROUP_CONCAT(episodes_to_ressources.episode_slug) as episode_slugs
+    FROM ressources
+    LEFT JOIN episodes_to_ressources ON ressources.slug = episodes_to_ressources.ressource_slug
+    WHERE kind="book"
+    GROUP BY ressources.slug
+    ORDER BY COUNT(episodes_to_ressources.episode_slug) DESC
+  `)
 
   const episodes = await db.all(`
     SELECT episodes.*, GROUP_CONCAT(episodes_to_ressources.ressource_slug) as ressource_slugs
@@ -17,6 +24,15 @@ export default async function () {
     GROUP BY episodes.slug
     ORDER BY youtube_published_at DESC
   `)
+
+  const episodeBySlug = episodes.reduce((acc, episode) => {
+    acc[episode.slug] = episode
+    return acc
+  }, {})
+  books.forEach(book => {
+    book.episodes = book.episode_slugs?.split(',')?.map(slug => episodeBySlug[slug])
+  })
+
   const ressourcesBySlug = ressources.reduce((acc, ressource) => {
     acc[ressource.slug] = ressource
     return acc
