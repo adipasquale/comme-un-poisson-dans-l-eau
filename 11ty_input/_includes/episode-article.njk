@@ -12,6 +12,15 @@
 
   <p>{{ episode.description }}</p>
 
+  {% if episode.ressources %}
+    Références citées :
+    <ul>
+      {% for ressource in episode.ressources %}
+        <li><a href="{{ ressource.url }}">{{ ressource.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
   <div>
     <a href="https://www.youtube.com/watch?v={{ episode.youtube_id }}">voir sur youtube</a>
   </div>

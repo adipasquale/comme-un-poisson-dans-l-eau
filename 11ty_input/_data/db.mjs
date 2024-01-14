@@ -10,9 +10,24 @@ export default async function () {
   const ressources = await db.all('SELECT * FROM ressources')
   const books = await db.all('SELECT * FROM ressources WHERE kind="book"')
 
-  const interviews = await db.all('SELECT * FROM episodes WHERE kind = "interview" ORDER BY youtube_published_at DESC')
-  const readings = await db.all('SELECT * FROM episodes WHERE kind = "reading" ORDER BY youtube_published_at DESC')
-  const specials = await db.all('SELECT * FROM episodes WHERE kind = "special" ORDER BY youtube_published_at DESC')
+  const episodes = await db.all(`
+    SELECT episodes.*, GROUP_CONCAT(episodes_to_ressources.ressource_slug) as ressource_slugs
+    FROM episodes
+    LEFT JOIN episodes_to_ressources ON episodes.slug = episodes_to_ressources.episode_slug
+    GROUP BY episodes.slug
+    ORDER BY youtube_published_at DESC
+  `)
+  const ressourcesBySlug = ressources.reduce((acc, ressource) => {
+    acc[ressource.slug] = ressource
+    return acc
+  }, {})
+  episodes.forEach(episode => {
+    episode.ressources = episode.ressource_slugs?.split(',')?.map(slug => ressourcesBySlug[slug])
+  })
+  const interviews = episodes.filter(episode => episode.kind === 'interview')
+  const readings = episodes.filter(episode => episode.kind === 'reading')
+  const specials = episodes.filter(episode => episode.kind === 'special')
+
 
   await db.close()
 
