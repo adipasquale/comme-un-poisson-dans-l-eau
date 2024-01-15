@@ -1,6 +1,7 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("11ty_input/*.css");
   eleventyConfig.addPassthroughCopy("images");
+  eleventyConfig.addPassthroughCopy("favicon");
   return {
     dir: {
       input: "11ty_input",
