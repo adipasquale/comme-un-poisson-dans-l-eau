@@ -10,4 +10,5 @@ layout: default
 
 <h2>Dernier épisode</h2>
 
-{%- set lastEpisode = db.episodes[-1] %}
+{%- set episode = db.episodes | first %}
+{% include "episode-article.njk" %}

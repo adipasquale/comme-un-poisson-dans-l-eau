@@ -18,6 +18,10 @@ article .book {
 	}
 }
 
+article.episode p.description {
+	white-space: pre-line;
+}
+
 header h1::after, footer::before {
 	background: url(../images/fish.png) repeat-x center;
 	display: block;

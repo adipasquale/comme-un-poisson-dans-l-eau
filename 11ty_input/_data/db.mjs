@@ -47,5 +47,5 @@ export default async function () {
 
   await db.close()
 
-  return { ressources, interviews, readings, specials, books }
+  return { ressources, episodes, interviews, readings, specials, books }
 }
