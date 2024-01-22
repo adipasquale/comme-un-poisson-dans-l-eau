@@ -2,7 +2,7 @@ import json
 from dotenv import load_dotenv
 import sqlite3
 import logging
-from db import get_connection
+from scripts.db import get_connection
 import requests
 import os
 

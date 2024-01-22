@@ -1,19 +1,32 @@
-article .book {
-	margin-top: 1rem;
-  display: flex;
+.fil-ariane {
+	margin-bottom: 1rem;
+	font-size: .8rem;
+}
 
-	.thumb {
-		width: 120px;
-		flex-shrink: 0;
-		flex-grow: 0;
-		padding: 0 .5rem;
+article.book {
+	h3 {
+		line-height: 1.2;
 	}
-  img {
-		width: 100%;
-  }
-	.content {
-		h4 {
-			padding-top: 0;
+	.cover-wrapper {
+		margin-top: 1rem;
+		display: flex;
+
+		.thumb {
+			width: 120px;
+			flex-shrink: 0;
+			flex-grow: 0;
+			padding: 0 .5rem;
+		}
+		img {
+			width: 100%;
+		}
+		.content {
+			h4 {
+				padding-top: 0;
+			}
+		}
+		details {
+			margin-top: .5rem;
 		}
 	}
 }

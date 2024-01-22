@@ -1,0 +1,91 @@
+---
+layout: default
+---
+
+<div class="fil-ariane">
+  <a href="/">Accueil</a>
+  >
+  {{ db.episodes | length }} épisodes
+</div>
+
+<h1>
+  {{ db.episodes | length }} épisodes
+</h1>
+
+<div>
+  🎙️
+  <a href="#entretiens">
+    {{ db.interviews | length }} épisodes d’entretiens
+  </a>
+</div>
+<div>
+  📚
+  <a href="#lectures">
+    {{ db.readings | length }} lectures
+  </a>
+</div>
+<div>
+  🎁
+  <a href="#speciaux">
+    {{ db.specials | length }} épisodes spéciaux
+  </a>
+</div>
+
+<h2 id="entretiens" style="margin-top: 1rem;">
+  🎙️ {{ db.interviews | length }} épisodes d’entretiens
+</h2>
+
+<a href="/entretiens">
+  liste détaillée des épisodes d’entretiens
+</a>
+<br><br>
+
+<ul>
+  {% for episode in db.interviews | reverse %}
+    <li>
+      <a href="/episodes/{{ episode.slug }}">
+        {{ episode.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+<h2 id="lectures">
+  📚
+  {{ db.readings | length }} lectures
+</h2>
+
+<a href="/lectures">
+  liste détaillée des lectures
+</a>
+<br><br>
+
+<ul>
+  {% for episode in db.readings | reverse %}
+    <li>
+      <a href="/episodes/{{ episode.slug }}">
+        {{ episode.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+<h2 id="speciaux">
+  🎁
+  {{ db.specials | length }} épisodes spéciaux
+</h2>
+
+<a href="/episodes-speciaux">
+  liste détaillée des épisodes spéciaux
+</a>
+<br><br>
+
+<ul>
+  {% for episode in db.specials | reverse %}
+    <li>
+      <a href="/episodes/{{ episode.slug }}">
+        {{ episode.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

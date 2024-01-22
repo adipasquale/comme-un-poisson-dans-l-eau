@@ -3,3 +3,4 @@ node_modules
 audio/*
 11ty_output/*
 __pycache__
+.venv

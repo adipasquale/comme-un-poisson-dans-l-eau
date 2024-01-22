@@ -23,17 +23,12 @@
 
     <nav>
       <a href="/">Accueil</a>
-    </nav>
-
-    <nav>
-      Épisodes :
-      <a href="/entretiens">{{db.interviews.length }} épisodes d’entretiens</a> |
-      <a href="/lectures">{{db.readings.length }} lectures</a> |
-      <a href="/episodes-speciaux">{{db.readings.length }} épisodes spéciaux</a>
-    </nav>
-
-    <nav>
-      Références :
+      ·
+      <a href="/episodes">{{ db.episodes | length }} épisodes</a>
+      <a href="/entretiens">{{db.interviews.length }} épisodes d’entretiens</a> ·
+      <a href="/lectures">{{db.readings.length }} lectures</a> ·
+      <a href="/episodes-speciaux">{{db.specials.length }} épisodes spéciaux</a>
+      ·
       <a href="/livres">{{ db.books.length }} Livres</a>
     </nav>
   </header>

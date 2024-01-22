@@ -1,5 +1,11 @@
 <article class="episode">
-  <h3>{{ episode.title }}</h3>
+  <h3>
+    {{ episode.title }}
+  </h3>
+
+  <a href="/episodes/{{ episode.slug }}">
+    Voir le détail et le transcript de l’épisode
+  </a>
 
   <img src="/images/episodes/{{ episode.poster_filename }}" alt="Comme un poisson dans l’eau - {{ episode.title }}">
 
@@ -19,13 +25,8 @@
   <p class="description">
     {{ episode.description }}
   </p>
-
-  {% if episode.ressources %}
-    Références citées :
-    <ul>
-      {% for ressource in episode.ressources %}
-        <li><a href="{{ ressource.url }}">{{ ressource.title }}</a></li>
-      {% endfor %}
-    </ul>
-  {% endif %}
 </article>
+
+<br>
+<br>
+<hr>

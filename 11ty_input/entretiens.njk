@@ -2,7 +2,19 @@
 layout: default
 ---
 
-<h2>Liste des {{ db.interviews.length }} entretiens</h2>
+<div class="fil-ariane">
+  <a href="/">Accueil</a>
+  >
+  <a href="/episodes">{{ db.episodes | length }} épisodes</a>
+  >
+  Liste détaillée des
+  {{ db.interviews | length }} entretiens
+</div>
+
+<h2>
+  🎙️
+  Liste détaillée des {{ db.interviews.length }} entretiens
+</h2>
 
 {% for episode in db.interviews %}
   {% include "episode-article.njk" %}

@@ -2,7 +2,20 @@
 layout: default
 ---
 
-<h2>Liste des {{ db.specials.length }} épisodes spéciaux</h2>
+
+<div class="fil-ariane">
+  <a href="/">Accueil</a>
+  >
+  <a href="/episodes">{{ db.episodes | length }} épisodes</a>
+  >
+  Liste détaillée des
+  {{ db.specials | length }} épisodes spéciaux
+</div>
+
+<h2>
+  🎁
+  Liste détaillée des {{ db.specials.length }} épisodes spéciaux
+</h2>
 
 {% for episode in db.specials %}
   {% include "episode-article.njk" %}

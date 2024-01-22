@@ -2,14 +2,25 @@
 layout: default
 ---
 
-<h2>Liste des {{ db.books.length }} livres cités</h2>
+<div class="fil-ariane">
+  <a href="/">Accueil</a>
+  >
+  {{ db.books | length }} livres cités
+</div>
+
+
+<h2>{{ db.books.length }} livres cités</h2>
 
 {% for ressource in db.books %}
-  <article>
+  <article class="book">
     <h3>
-      {{ ressource.book_title }} - {{ ressource.authors }}
-    </h3>
-    <div class="book">
+      {{ ressource.book_title }}<br>
+      {% if ressource.book_subtitle %}
+        <i>{{ ressource.book_subtitle }}</i><br>
+      {% endif %}
+      {{ ressource.authors }}
+    </h4>
+    <div class="cover-wrapper">
       <div class="thumb">
         {% if ressource.book_thumb %}
           <img src="/images/books/{{ ressource.book_thumb }}" alt="{{ ressource.book_title }} - {{ ressource.authors }}">
@@ -18,21 +29,26 @@ layout: default
         {% endif %}
       </div>
       <div class="content">
-        {% if ressource.book_subtitle %}
-          <h4>{{ ressource.book_subtitle }}</h4>
+        {% if ressource.isbn %}
+          <div><small>ISBN : {{ ressource.isbn }}</small></div>
         {% endif %}
-        <div><small>{{ ressource.isbn }}</small></div>
-        <div><small><i>{{ ressource.title }}</i></small></div>
-        <div>
-          Cité dans les épisodes
+        {% if r/.*placedeslibraires.*/.test(ressource.url)  %}
+          <a href="{{ ressource.url }}" target="_blank">
+            Acheter sur Place des Libraires ↗️
+          </a>
+        {% endif %}
+        <details>
+          <summary>Cité dans {{ ressource.episodes | length }} épisode(s)</summary>
           <ul>
             {% for episode in ressource.episodes %}
               <li>
-                {{ episode.title }}
+                <a href="/episodes/{{ episode.slug }}">
+                  {{ episode.title }}
+                </a>
               </li>
             {% endfor %}
           </ul>
-        </div>
+        </details>
       </div>
     </div>
   </article>
