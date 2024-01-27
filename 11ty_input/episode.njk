@@ -40,6 +40,15 @@ layout: default
     {{ episode.description }}
   </p>
 
+  <h2>Transcription</h2>
+  {%- for transcript in collections.transcript -%}
+    {%- if transcript.data.slug == episode.slug -%}
+      <div class="transcript">
+        {{ transcript.content | safe }}
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+
   {% if episode.ressources %}
     Références citées :
     <ul>
