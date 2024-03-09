@@ -22,7 +22,7 @@ export default async function () {
     FROM episodes
     LEFT JOIN episodes_to_ressources ON episodes.slug = episodes_to_ressources.episode_slug
     GROUP BY episodes.slug
-    ORDER BY youtube_published_at DESC
+    ORDER BY youtube_published_at ASC
   `)
 
   const episodeBySlug = episodes.reduce((acc, episode) => {
@@ -40,8 +40,8 @@ export default async function () {
   episodes.forEach(episode => {
     episode.ressources = episode.ressource_slugs?.split(',')?.map(slug => ressourcesBySlug[slug])
   })
-  const interviews = episodes.filter(episode => episode.kind === 'interview')
-  const readings = episodes.filter(episode => episode.kind === 'reading')
+  const interviews = episodes.filter(episode => episode.kind === 'entretien')
+  const readings = episodes.filter(episode => episode.kind === 'lecture')
   const specials = episodes.filter(episode => episode.kind === 'special')
 
 

@@ -9,83 +9,80 @@ layout: default
 </div>
 
 <h1>
-  {{ db.episodes | length }} épisodes
+  Liste des {{ db.episodes | length }} épisodes du podcast
 </h1>
 
-<div>
-  🎙️
-  <a href="#entretiens">
-    {{ db.interviews | length }} épisodes d’entretiens
-  </a>
-</div>
-<div>
-  📚
-  <a href="#lectures">
-    {{ db.readings | length }} lectures
-  </a>
-</div>
-<div>
-  🎁
-  <a href="#speciaux">
-    {{ db.specials | length }} épisodes spéciaux
-  </a>
-</div>
+<section>
+  Filtres :
+  <div>
+    <input type="radio" name="filter-type" value="all" id="filter-type-all" autocomplete="off" checked>
+    <label for="filter-type-all">Tous les épisodes</label>
+  </div>
+  <div>
+    <input type="radio" name="filter-type" value="entretiens" id="filter-type-entretiens" autocomplete="off">
+    <label for="filter-type-entretiens">Uniquement les entretiens 🎙️ ({{ db.interviews | length }} épisodes)</label>
+  </div>
+  <div>
+    <input type="radio" name="filter-type" value="lectures" id="filter-type-lectures" autocomplete="off">
+    <label for="filter-type-lectures">Uniquement les lectures 📚 ({{ db.readings | length }} épisodes)</label>
+  </div>
+  <div>
+    <input type="radio" name="filter-type" value="speciaux" id="filter-type-speciaux" autocomplete="off">
+    <label for="filter-type-speciaux">Uniquement les épisodes spéciaux 🎁 ({{ db.specials | length }} épisodes)</label>
+  </div>
+</section>
 
-<h2 id="entretiens" style="margin-top: 1rem;">
-  🎙️ {{ db.interviews | length }} épisodes d’entretiens
-</h2>
+<section>
+  Tri :
+  <div>
+    <input type="radio" name="order" value="asc" id="order-asc" autocomplete="off" checked>
+    <label for="order-asc">Par ordre chronologique</label>
+  </div>
+  <div>
+    <input type="radio" name="order" value="desc" id="order-desc" autocomplete="off">
+    <label for="order-desc">Le plus récent en premier</label>
+  </div>
+</section>
 
-<a href="/entretiens">
-  liste détaillée des épisodes d’entretiens
-</a>
-<br><br>
-
-<ul>
-  {% for episode in db.interviews | reverse %}
-    <li>
+<div class="articles">
+  {% for episode in db.episodes %}
+    <article class="episode" data-type="{{ episode.kind }}">
       <a href="/episodes/{{ episode.slug }}">
-        {{ episode.title }}
+        <h3>
+          {{ episode.title }}
+        </h3>
+
+        <img src="/images/episodes/{{ episode.poster_filename }}" alt="Comme un poisson dans l’eau - {{ episode.title }}">
       </a>
-    </li>
+    </article>
   {% endfor %}
-</ul>
+</div>
 
-<h2 id="lectures">
-  📚
-  {{ db.readings | length }} lectures
-</h2>
+<style>
+  article.episode {
+    border-bottom: 1px solid #ddd;
+  }
+  .articles[data-filter-type="entretiens"] article.episode:not([data-type="entretien"]) {
+    display: none;
+  }
+  .articles[data-filter-type="lectures"] article.episode:not([data-type="lecture"]) {
+    display: none;
+  }
+  .articles[data-filter-type="speciaux"] article.episode:not([data-type="special"]) {
+    display: none;
+  }
+  .articles[data-order="desc"] {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+</style>
 
-<a href="/lectures">
-  liste détaillée des lectures
-</a>
-<br><br>
-
-<ul>
-  {% for episode in db.readings | reverse %}
-    <li>
-      <a href="/episodes/{{ episode.slug }}">
-        {{ episode.title }}
-      </a>
-    </li>
-  {% endfor %}
-</ul>
-
-<h2 id="speciaux">
-  🎁
-  {{ db.specials | length }} épisodes spéciaux
-</h2>
-
-<a href="/episodes-speciaux">
-  liste détaillée des épisodes spéciaux
-</a>
-<br><br>
-
-<ul>
-  {% for episode in db.specials | reverse %}
-    <li>
-      <a href="/episodes/{{ episode.slug }}">
-        {{ episode.title }}
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+<script>
+  const articlesElt = document.querySelector('.articles');
+  document.querySelectorAll('input[name="filter-type"]').forEach(function (input) {
+    input.addEventListener('change', e => articlesElt.dataset.filterType = e.currentTarget.value)
+  });
+  document.querySelectorAll('input[name="order"]').forEach(function (input) {
+    input.addEventListener('change', e => articlesElt.dataset.order = e.currentTarget.value)
+  });
+</script>

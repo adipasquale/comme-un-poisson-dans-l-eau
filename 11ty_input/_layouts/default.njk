@@ -24,12 +24,9 @@
     <nav>
       <a href="/">Accueil</a>
       ·
-      <a href="/episodes">{{ db.episodes | length }} épisodes</a>
-      <a href="/entretiens">{{db.interviews.length }} épisodes d’entretiens</a> ·
-      <a href="/lectures">{{db.readings.length }} lectures</a> ·
-      <a href="/episodes-speciaux">{{db.specials.length }} épisodes spéciaux</a>
+      <a href="/episodes">Liste des {{ db.episodes | length }} épisodes du podcast</a>
       ·
-      <a href="/livres">{{ db.books.length }} Livres</a>
+      <a href="/livres">Liste des {{ db.books.length }} livres cités</a>
     </nav>
   </header>
 
