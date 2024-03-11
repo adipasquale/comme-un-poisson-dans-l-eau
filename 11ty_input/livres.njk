@@ -12,7 +12,7 @@ layout: default
 <h2>{{ db.books.length }} livres cités</h2>
 
 {% for ressource in db.books %}
-  <article class="book">
+  <article class="book" data-slug="{{ ressource.slug }}">
     <h3>
       {{ ressource.book_title }}<br>
       {% if ressource.book_subtitle %}
