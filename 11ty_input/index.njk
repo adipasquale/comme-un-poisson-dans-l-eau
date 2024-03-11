@@ -4,19 +4,19 @@ layout: default
 
 <p>
   Ce site présente les
-  <a href="/episodes">{{ db.episodes.length }} épisodes</a> du podcast ainsi que les <a href="/livres">{{ db.books.length }} livres</a> cités pour être facilement accessibles.
+  <a href="/episodes">{{ db.episodes.length }} épisodes</a> du podcast ainsi que les <a href="/livres">{{ db.livres.length }} livres</a> cités pour être facilement accessibles.
 </p>
 
 <h2>Dernier épisode</h2>
 
-{%- set episode = db.episodes | first %}
+{%- set episode = db.episodes | reverse | first %}
 
 <article class="episode">
   <a href="/episodes/{{ episode.slug }}">
     <h3>
-      {{ episode.title }}
+      {{ episode.titre }}
     </h3>
 
-    <img src="/images/episodes/{{ episode.poster_filename }}" alt="Comme un poisson dans l’eau - {{ episode.title }}">
+    <img src="/images/episodes/{{ episode.poster_filename }}" alt="Comme un poisson dans l’eau - {{ episode.titre }}">
   </a>
 </article>

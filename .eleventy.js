@@ -5,6 +5,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addWatchTarget("commeunpoissondansleau.db");
 
+  eleventyConfig.addFilter("displayDate", function (date) {
+    return new Date(date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' });
+  });
+
   return {
     dir: {
       input: "11ty_input",

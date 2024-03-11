@@ -20,15 +20,15 @@ layout: default
   </div>
   <div>
     <input type="radio" name="filter-type" value="entretiens" id="filter-type-entretiens" autocomplete="off">
-    <label for="filter-type-entretiens">Uniquement les entretiens 🎙️ ({{ db.interviews | length }} épisodes)</label>
+    <label for="filter-type-entretiens">Uniquement les entretiens 🎙️ ({{ db.entretiens | length }} épisodes)</label>
   </div>
   <div>
     <input type="radio" name="filter-type" value="lectures" id="filter-type-lectures" autocomplete="off">
-    <label for="filter-type-lectures">Uniquement les lectures 📚 ({{ db.readings | length }} épisodes)</label>
+    <label for="filter-type-lectures">Uniquement les lectures 📚 ({{ db.lectures | length }} épisodes)</label>
   </div>
   <div>
     <input type="radio" name="filter-type" value="speciaux" id="filter-type-speciaux" autocomplete="off">
-    <label for="filter-type-speciaux">Uniquement les épisodes spéciaux 🎁 ({{ db.specials | length }} épisodes)</label>
+    <label for="filter-type-speciaux">Uniquement les épisodes spéciaux 🎁 ({{ db.episodes_speciaux | length }} épisodes)</label>
   </div>
 </section>
 
@@ -44,41 +44,40 @@ layout: default
   </div>
 </section>
 
-<div class="articles">
+<div class="episodes-list">
   {% for episode in db.episodes %}
-    <article class="episode" data-type="{{ episode.kind }}">
-      <a href="/episodes/{{ episode.slug }}">
-        <h3>
-          {{ episode.title }}
-        </h3>
-
-        <img src="/images/episodes/{{ episode.poster_filename }}" alt="Comme un poisson dans l’eau - {{ episode.title }}">
-      </a>
+    <article class="episode card" data-type="{{ episode.type_episode }}">
+      <div style="border-bottom: .5rem;">
+        <a href="/episodes/{{ episode.slug }}" class="card-stretched-link">{{ episode.titre }}</a>
+      </div>
+      <div>
+        {{ episode.date_publication | displayDate }}
+      </div>
+      <div>
+        <img src="/images/episodes/{{ episode.poster_filename }}" alt="Comme un poisson dans l’eau - {{ episode.titre }}">
+      </div>
     </article>
   {% endfor %}
 </div>
 
 <style>
-  article.episode {
-    border-bottom: 1px solid #ddd;
-  }
-  .articles[data-filter-type="entretiens"] article.episode:not([data-type="entretien"]) {
+  .episodes-list[data-filter-type="entretiens"] .episode:not([data-type="entretien"]) {
     display: none;
   }
-  .articles[data-filter-type="lectures"] article.episode:not([data-type="lecture"]) {
+  .episodes-list[data-filter-type="lectures"] .episode:not([data-type="lecture"]) {
     display: none;
   }
-  .articles[data-filter-type="speciaux"] article.episode:not([data-type="special"]) {
+  .episodes-list[data-filter-type="speciaux"] .episode:not([data-type="special"]) {
     display: none;
   }
-  .articles[data-order="desc"] {
+  .episodes-list[data-order="desc"] {
     display: flex;
     flex-direction: column-reverse;
   }
 </style>
 
 <script>
-  const articlesElt = document.querySelector('.articles');
+  const articlesElt = document.querySelector('.episodes-list');
   document.querySelectorAll('input[name="filter-type"]').forEach(function (input) {
     input.addEventListener('change', e => articlesElt.dataset.filterType = e.currentTarget.value)
   });

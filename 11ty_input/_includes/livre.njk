@@ -1,0 +1,40 @@
+<article class="livre" data-slug="{{ livre.slug }}">
+  <h3>
+    {{ livre.livre_titre }}<br>
+    {% if livre.livre_sous_titre %}
+      <i>{{ livre.livre_sous_titre }}</i><br>
+    {% endif %}
+    {{ livre.auteurs }}
+  </h3>
+  <div class="cover-wrapper">
+    <div class="thumb">
+      {% if livre.livre_image %}
+        <img src="/images/books/{{ livre.livre_image }}" alt="{{ livre.livre_titre }} - {{ livre.auteurs }}">
+      {% else %}
+        <img src="/images/book-thumb-default.png" alt="silhouette de livre">
+      {% endif %}
+    </div>
+    <div class="content">
+      {% if livre.isbn %}
+        <div><small>ISBN : {{ livre.isbn }}</small></div>
+      {% endif %}
+      {% if r/.*placedeslibraires.*/.test(livre.url)  %}
+        <a href="{{ livre.url }}" target="_blank">
+          Acheter sur Place des Libraires
+        </a>
+      {% endif %}
+      <details>
+        <summary>Cité dans {{ livre.episodes | length }} épisode(s)</summary>
+        <ul>
+          {% for episode in livre.episodes %}
+            <li>
+              <a href="/episodes/{{ episode.slug }}">
+                {{ episode.titre }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </details>
+    </div>
+  </div>
+</article>

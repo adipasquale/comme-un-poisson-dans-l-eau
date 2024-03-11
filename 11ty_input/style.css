@@ -1,9 +1,51 @@
+/* COMMON */
+
+/* from https://sugar-css.com/doc/typography/headings */
+h1{ font-size: 2rem; }
+h2{ font-size: 1.75rem; }
+h3{ font-size: 1.375rem; }
+h4{ font-size: 1.125rem; }
+h5{ font-size: 1rem; }
+h6{ font-size: 1re; }
+
 .fil-ariane {
 	margin-bottom: 1rem;
 	font-size: .8rem;
 }
 
-article.book {
+article.card {
+	padding: 1.5rem;
+	background: var(--nc-bg-2);
+	border-left: 5px solid var(--nc-bg-3);
+	position: relative;
+}
+
+article.card:hover {
+	border-left-color: #999;
+}
+
+/* technique copied from bootstrap */
+article.card a.card-stretched-link::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+}
+
+
+
+/* PAGE EPISODES */
+
+.episodes-list img {
+	max-width: 400px;
+}
+
+/* PAGE LIVRES */
+
+article.livre {
 	h3 {
 		line-height: 1.2;
 	}
@@ -29,10 +71,6 @@ article.book {
 			margin-top: .5rem;
 		}
 	}
-}
-
-article.episode p.description {
-	white-space: pre-line;
 }
 
 header h1::after, footer::before {
@@ -61,4 +99,8 @@ footer {
 
 	padding-left: calc(50vw - 50%);
 	padding-right: calc(50vw - 50%);
+}
+
+a[href]:not([href^="/"])::after {
+	content: " ⤴";
 }

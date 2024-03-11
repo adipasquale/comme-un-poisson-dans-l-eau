@@ -5,51 +5,12 @@ layout: default
 <div class="fil-ariane">
   <a href="/">Accueil</a>
   >
-  {{ db.books | length }} livres cités
+  {{ db.livres | length }} livres cités
 </div>
 
 
-<h2>{{ db.books.length }} livres cités</h2>
+<h2>{{ db.livres.length }} livres cités</h2>
 
-{% for ressource in db.books %}
-  <article class="book" data-slug="{{ ressource.slug }}">
-    <h3>
-      {{ ressource.book_title }}<br>
-      {% if ressource.book_subtitle %}
-        <i>{{ ressource.book_subtitle }}</i><br>
-      {% endif %}
-      {{ ressource.authors }}
-    </h4>
-    <div class="cover-wrapper">
-      <div class="thumb">
-        {% if ressource.book_thumb %}
-          <img src="/images/books/{{ ressource.book_thumb }}" alt="{{ ressource.book_title }} - {{ ressource.authors }}">
-        {% else %}
-          <img src="/images/book-thumb-default.png" alt="silhouette de livre">
-        {% endif %}
-      </div>
-      <div class="content">
-        {% if ressource.isbn %}
-          <div><small>ISBN : {{ ressource.isbn }}</small></div>
-        {% endif %}
-        {% if r/.*placedeslibraires.*/.test(ressource.url)  %}
-          <a href="{{ ressource.url }}" target="_blank">
-            Acheter sur Place des Libraires ↗️
-          </a>
-        {% endif %}
-        <details>
-          <summary>Cité dans {{ ressource.episodes | length }} épisode(s)</summary>
-          <ul>
-            {% for episode in ressource.episodes %}
-              <li>
-                <a href="/episodes/{{ episode.slug }}">
-                  {{ episode.title }}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        </details>
-      </div>
-    </div>
-  </article>
+{% for livre in db.livres %}
+  {% include "livre.njk" %}
 {% endfor %}

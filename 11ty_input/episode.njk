@@ -12,48 +12,64 @@ layout: default
   >
   <a href="/episodes/">{{ db.episodes | length }} épisodes</a>
   >
-  {{ episode.title | truncate(30) }}
+  {{ episode.titre | truncate(30) }}
 </div>
 
 
 <h1>
-  Épisode {{ episode.title }}
+  Épisode {{ episode.titre }}
 </h1>
 
+{{ episode.date_publication | displayDate }}
+
 <article class="episode">
-  <img src="/images/episodes/{{ episode.poster_filename }}" alt="Comme un poisson dans l’eau - {{ episode.title }}">
+  <img src="/images/episodes/{{ episode.poster_filename }}" alt="Comme un poisson dans l’eau - {{ episode.titre }}">
 
   <div>
     <a href="https://www.youtube.com/watch?v={{ episode.youtube_id }}">écouter cet épisode sur youtube</a>
   </div>
 
   {#
-  {% if episode.audio_filename %}
-    <audio controls>
-      <source src="{{ episode.audio_filename }}" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-  {% endif %}
-    #}
+    {% if episode.audio_filename %}
+      <audio controls>
+        <source src="{{ episode.audio_filename }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    {% endif %}
+  #}
 
-  <p class="description">
-    {{ episode.description }}
-  </p>
+  <h2>Description</h2>
+  <p style="white-space: pre-line;">{{ episode.description }}</p>
+  {# important not to put spaces or line break in this line #}
 
-  <h2>Transcription</h2>
+  {%- set foundTranscript = false -%}
   {%- for transcript in collections.transcript -%}
     {%- if transcript.data.slug == episode.slug -%}
-      <div class="transcript">
-        {{ transcript.content | safe }}
-      </div>
+      {%- set foundTranscript = transcript -%}
     {%- endif -%}
   {%- endfor -%}
+  {%- if foundTranscript -%}
+    <h2>Transcription</h2>
+    <details>
+      <summary>Voir la transcription</summary>
+      <p>
+        {{ foundTranscript.content | safe }}
+      </p>
+    </details>
+  {%- endif -%}
 
-  {% if episode.ressources %}
-    Références citées :
+  {% if episode.livres.length > 0 %}
+    <h2>{{ episode.livres | length }} livres cités :</h2>
+    {% for livre in episode.livres %}
+      {% include "livre.njk" %}
+    {% endfor %}
+  {% endif %}
+
+  {% if episode.ressources.length > 0 %}
+    <h2>{{episode.ressources | length }} autres références citées :</h2>
     <ul>
       {% for ressource in episode.ressources %}
-        <li><a href="{{ ressource.url }}">{{ ressource.title }}</a></li>
+        <li><a href="{{ ressource.url }}">{{ ressource.titre }}</a> ({{ ressource.type_ressource}})</li>
       {% endfor %}
     </ul>
   {% endif %}
