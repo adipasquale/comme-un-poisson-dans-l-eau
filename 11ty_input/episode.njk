@@ -71,7 +71,25 @@ layout: default
     <h2>{{episode.ressources | length }} autres références citées :</h2>
     <ul>
       {% for ressource in episode.ressources %}
-        <li><a href="{{ ressource.url }}">{{ ressource.titre }}</a> ({{ ressource.type_ressource}})</li>
+        {% if ressource.url %}
+          <li>
+            <a href="{{ ressource.url }}">
+              {{ ressource.titre }}
+            </a>
+            {% if ressource.type_ressource == 'lien' and ressource.url_domain %}
+              (<i>{{ ressource.url_domain }}</i>)
+            {% elif ressource.type_ressource %}
+              ({{ ressource.type_ressource}})
+            {% endif %}
+          </li>
+        {% else %}
+          <li>
+            {{ ressource.titre }}
+            {% if ressource.type_ressource %}
+              ({{ ressource.type_ressource}})
+            {% endif %}
+          </li>
+        {% endif %}
       {% endfor %}
     </ul>
   {% endif %}
