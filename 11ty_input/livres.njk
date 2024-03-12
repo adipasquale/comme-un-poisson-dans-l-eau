@@ -9,7 +9,11 @@ layout: default
 </div>
 
 
-<h2>{{ db.livres.length }} livres cités</h2>
+<h2>Liste des {{ db.livres.length }} livres cités dans le podcast</h2>
+
+<p style="font-style: italic;">
+  Les livres les plus fréquemment cités apparaissent en premier.
+</p>
 
 {% for livre in db.livres %}
   {% include "livre.njk" %}

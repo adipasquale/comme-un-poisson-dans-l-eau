@@ -8,6 +8,13 @@ h4{ font-size: 1.125rem; }
 h5{ font-size: 1rem; }
 h6{ font-size: 1re; }
 
+body {
+	padding-bottom: 0;
+}
+footer {
+	margin-bottom: 0 !important;
+}
+
 .fil-ariane {
 	margin-bottom: 1rem;
 	font-size: .8rem;

@@ -7,7 +7,7 @@ layout: default
   <a href="/episodes">{{ db.episodes.length }} épisodes</a> du podcast ainsi que les <a href="/livres">{{ db.livres.length }} livres</a> cités pour être facilement accessibles.
 </p>
 
-<h2>Dernier épisode</h2>
+<h2>🎤 Dernier épisode</h2>
 
 {%- set episode = db.episodes | reverse | first %}
 
@@ -20,3 +20,17 @@ layout: default
     <img src="/images/episodes/{{ episode.poster_filename }}" alt="Comme un poisson dans l’eau - {{ episode.titre }}">
   </a>
 </article>
+
+<p>
+  <a href="/episodes">Voir la liste complète des {{ db.episodes | length }} épisodes</a>
+</p>
+
+<h2>📚 Livre fréquemment cité</h2>
+
+{%- set livre = db.livreMisEnAvant %}
+
+{% include "livre.njk" %}
+
+<p>
+  <a href="/livres">Voir la liste complète des {{ db.livres | length }} livres cités</a>
+</p>

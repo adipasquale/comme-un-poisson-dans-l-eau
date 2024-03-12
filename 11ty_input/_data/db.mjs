@@ -50,12 +50,14 @@ export default async function () {
     }
   })
 
-  const livres = ressources.filter(ressource => ressource.type_ressource === 'livre')
-  const entretiens = episodes.filter(episode => episode.type_episode === 'entretien')
-  const lectures = episodes.filter(episode => episode.type_episode === 'lecture')
-  const episodes_speciaux = episodes.filter(episode => episode.type_episode === 'special')
+  const livres = ressources.filter(r => r.type_ressource === 'livre')
+  const entretiens = episodes.filter(e => e.type_episode === 'entretien')
+  const lectures = episodes.filter(e => e.type_episode === 'lecture')
+  const episodes_speciaux = episodes.filter(e => e.type_episode === 'special')
 
   await db.close()
 
-  return { ressources, episodes, entretiens, lectures, episodes_speciaux, livres }
+  const livreMisEnAvant = livres.find(r => r.slug == "le-livre-solidarite-animale-defaire-la-societe-speciste-d-axelle-playoust-braure-et-yves-bonnardel")
+
+  return { ressources, episodes, entretiens, lectures, episodes_speciaux, livres, livreMisEnAvant }
 }

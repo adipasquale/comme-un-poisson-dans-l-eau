@@ -15,6 +15,9 @@
       {% endif %}
     </div>
     <div class="content">
+      {% if livre.description %}
+        <p>{{ livre.description }}</p>
+      {% endif %}
       {% if livre.isbn %}
         <div><small>ISBN : {{ livre.isbn }}</small></div>
       {% endif %}
