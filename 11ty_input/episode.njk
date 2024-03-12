@@ -60,17 +60,52 @@ layout: default
     </details>
   {%- endif -%}
 
-  {% if episode.livres.length > 0 %}
-    <h2>{{ episode.livres | length }} livres cités :</h2>
-    {% for livre in episode.livres %}
+  {%- set livres = episode.ressources | selectRessourceType('livre') %}
+  {% if livres | length > 0 %}
+    <h2>{{ livres | length }} livres cités :</h2>
+    {% for livre in livres %}
       {% include "livre.njk" %}
     {% endfor %}
   {% endif %}
 
-  {% if episode.ressources.length > 0 %}
-    <h2>{{episode.ressources | length }} autres références citées :</h2>
+  {%- set personnes = episode.ressources | selectRessourceType('personne') %}
+  {% if personnes | length > 0 %}
+    <h2>{{personnes | length }} personne(s) mentionnée(s) :</h2>
     <ul>
-      {% for ressource in episode.ressources %}
+      {% for personne in personnes %}
+        {% if personne.url %}
+          <li>
+            <a href="{{ personne.url }}">{{ personne.titre }}</a>
+            {% if personne.url_domain %}
+              (<i>{{ personne.url_domain }}</i>)
+            {% endif %}
+          </li>
+        {% else %}
+          <li>{{ personne.titre }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- set autresEpisodes = episode.ressources | selectRessourceType('autre épisode') %}
+  {% if autresEpisodes | length > 0 %}
+    <h2>{{autresEpisodes | length }} autre(s) épisode(s) mentionné(s) :</h2>
+    <ul>
+      {% for autreEpisode in autresEpisodes %}
+        <li>
+          <a href="{{ autreEpisode.url }}">{{ autreEpisode.titre }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+
+
+  {%- set autresRessources = episode.ressources | excludeRessourceTypes(['livre', 'personne']) %}
+  {% if autresRessources | length > 0 %}
+    <h2>{{autresRessources | length }} autres références :</h2>
+    <ul>
+      {% for ressource in autresRessources %}
         {% if ressource.url %}
           <li>
             <a href="{{ ressource.url }}">

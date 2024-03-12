@@ -24,21 +24,21 @@ isbns = [r["isbn"] for r in cur.execute(
     """
         SELECT isbn
         FROM ressources
-        WHERE kind = 'book'
+        WHERE type_ressource = 'livre'
         GROUP BY isbn
         HAVING count(isbn) > 1
     """
 ).fetchall()]
 for isbn in isbns:
     ressources = cur.execute(
-        "SELECT rowid, slug, isbn, title FROM ressources WHERE isbn = ?", (isbn,)).fetchall()
-    logging.info(f"Found {len(ressources)} duplicates for isbn {
-                 isbn} title {ressources[0]['title']}")
+        "SELECT rowid, slug, isbn, titre FROM ressources WHERE isbn = ?", (isbn,)).fetchall()
+    logging.info(f"Found {len(ressources)} duplicates for isbn {isbn} titre {ressources[0]['titre']}")
     keep = ressources[0]
     for duplicate in ressources[1:]:
-        logging.info(f" - merging {duplicate['title']}")
+        logging.info(f" - merging {duplicate['titre']}")
         cur.execute(
-            "UPDATE episodes_to_ressources SET ressource_slug = ? WHERE ressource_slug = ?", (keep["slug"], duplicate["slug"]))
-        cur.execute(
-            "DELETE FROM ressources WHERE rowid = ?", (duplicate["rowid"],))
+            "UPDATE episodes_to_ressources SET ressource_slug = ? WHERE ressource_slug = ?",
+            (keep["slug"], duplicate["slug"])
+        )
+        cur.execute("DELETE FROM ressources WHERE rowid = ?", (duplicate["rowid"],))
         con.commit()

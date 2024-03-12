@@ -23,6 +23,7 @@ export default async function () {
     GROUP BY episodes.slug
     ORDER BY date_publication ASC
   `)
+  await db.close()
 
   const episodeBySlug = episodes.reduce((acc, episode) => {
     acc[episode.slug] = episode
@@ -39,25 +40,23 @@ export default async function () {
   }, {})
 
   episodes.forEach(episode => {
-    episode.livres = []
     episode.ressources = []
     for (const slug of episode.ressource_slugs?.split(',') || []) {
       const ressource = ressourcesBySlug[slug]
-      if (ressource.type_ressource === 'livre')
-        episode.livres.push(ressource)
-      else
+      if (ressource)
         episode.ressources.push(ressource)
     }
   })
 
-  const livres = ressources.filter(r => r.type_ressource === 'livre')
   const entretiens = episodes.filter(e => e.type_episode === 'entretien')
   const lectures = episodes.filter(e => e.type_episode === 'lecture')
   const episodes_speciaux = episodes.filter(e => e.type_episode === 'special')
 
-  await db.close()
 
+  const livres = ressources.filter(r => r.type_ressource === 'livre')
+  const personnes = ressources.filter(r => r.type_ressource === 'personne')
+  const autresRessources = ressources.filter(r => !['livre', 'personne'].includes(r.type_ressource))
   const livreMisEnAvant = livres.find(r => r.slug == "le-livre-solidarite-animale-defaire-la-societe-speciste-d-axelle-playoust-braure-et-yves-bonnardel")
 
-  return { ressources, episodes, entretiens, lectures, episodes_speciaux, livres, livreMisEnAvant }
+  return { ressources, episodes, entretiens, lectures, episodes_speciaux, livres, livreMisEnAvant, personnes, autresRessources }
 }

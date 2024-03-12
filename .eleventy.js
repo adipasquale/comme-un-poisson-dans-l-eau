@@ -9,6 +9,14 @@ module.exports = function (eleventyConfig) {
     return new Date(date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' });
   });
 
+  eleventyConfig.addFilter("selectRessourceType", function (ressources, type) {
+    return ressources.filter(r => r.type_ressource === type);
+  })
+
+  eleventyConfig.addFilter("excludeRessourceTypes", function (ressources, types) {
+    return ressources.filter(r => !types.includes(r.type_ressource));
+  })
+
   return {
     dir: {
       input: "11ty_input",
