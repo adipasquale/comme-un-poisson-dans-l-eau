@@ -23,10 +23,12 @@ layout: default
 {{ episode.date_publication | displayDate }}
 
 <article class="episode">
-  <img src="/images/episodes/{{ episode.poster_filename }}" alt="Comme un poisson dans l’eau - {{ episode.titre }}">
+  <div style="margin-bottom: 2rem;">
+    <img src="/images/episodes/{{ episode.poster_filename }}" alt="Comme un poisson dans l’eau - {{ episode.titre }}">
 
-  <div>
-    <a href="https://www.youtube.com/watch?v={{ episode.youtube_id }}">écouter cet épisode sur youtube</a>
+    <div>
+      <a href="https://www.youtube.com/watch?v={{ episode.youtube_id }}">écouter cet épisode sur youtube</a>
+    </div>
   </div>
 
   {#

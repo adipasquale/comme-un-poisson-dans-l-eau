@@ -3,17 +3,13 @@ import os
 from dotenv import load_dotenv
 import json
 import logging
-from db import get_connection
+from scripts.db import get_connection
+from slugify import slugify
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO)
 con = get_connection()
 cur = con.cursor()
-
-cur.execute("DROP TABLE IF EXISTS ressources")
-cur.execute("DROP TABLE IF EXISTS episodes")
-cur.execute(
-    "CREATE TABLE videos (youtube_id TEXT, youtube_json TEXT, title TEXT)")
 
 channel_id = "UCfzKqH_Ft8_8yFrGzG3x9-g"
 api_key = os.getenv("GOOGLE_API_KEY")
@@ -29,6 +25,25 @@ uploads_playlist_id = data["items"][0]["contentDetails"]["relatedPlaylists"]["up
 videos_url = f"https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId={
     uploads_playlist_id}&key={api_key}&maxResults=50&sort=date"
 
+episodes = list(cur.execute("SELECT * FROM episodes").fetchall())
+
+def parse_youtube_json_to_episode(youtube_json):
+    titre = youtube_json["snippet"]["title"]
+    raw_description = youtube_json["snippet"]["description"]
+    description_sections = raw_description.split("\n___")
+    thumbs = data["snippet"]["thumbnails"]
+    return {
+        "youtube_id" : youtube_json["id"],
+        "youtube_json" : json.dumps(youtube_json),
+        "titre" : titre,
+        "slug" : slugify(titre),
+        "date_publication" : youtube_json["snippet"]["publishedAt"],
+        "poster_filename" : thumbs.get("standard", thumbs.get("high", {})).get("url"),
+        "description" : description_sections[0].strip(),
+        "type_episode" : "entretien",
+    }
+
+
 next_page_token = None
 while True:
     if next_page_token:
@@ -40,9 +55,32 @@ while True:
 
     logging.info(f"Inserting {len(data['items'])} videos into the db...")
     for video in data["items"]:
-        title = video["snippet"]["title"]
+        parsed_episode = parse_youtube_json_to_episode(video)
+        if any(episode["titre"] == parsed_episode["titre"] for episode in episodes):
+            continue
+        logging.info(f"Importing new episode {parsed_episode['titre']}...")
         cur.execute(
-            "INSERT INTO videos (youtube_id, youtube_json, title) VALUES (?, ?, ?)", (video["id"], json.dumps(video), title))
+            """
+                INSERT INTO episodes (
+                    youtube_id,
+                    youtube_json,
+                    titre,
+                    slug,
+                    date_publication,
+                    poster_filename,
+                    description,
+                    type_episode
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """, (
+                parsed_episode["youtube_id"],
+                parsed_episode["youtube_json"],
+                parsed_episode["titre"],
+                parsed_episode["slug"],
+                parsed_episode["date_publication"],
+                parsed_episode["poster_filename"],
+                parsed_episode["description"],
+                parsed_episode["type_episode"]
+            ))
         con.commit()
 
     if "nextPageToken" in data:
