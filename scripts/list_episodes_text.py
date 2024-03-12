@@ -1,7 +1,7 @@
 from urllib.parse import urlparse
 from dotenv import load_dotenv
 import logging
-from db import get_connection
+from scripts.db import get_connection
 import json
 
 load_dotenv()
@@ -24,7 +24,7 @@ for episode in cur.execute("SELECT * FROM episodes").fetchall():
     ressources = extract_ressources(description)
     if not ressources:
         continue
-    print(f"# {episode['title']}")
+    print(f"# {episode['titre']}")
     print(f"{episode['slug']}\n")
     print("\n".join(ressources))
     print("\n------\n")
