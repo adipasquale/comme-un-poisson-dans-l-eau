@@ -101,7 +101,7 @@ layout: default
 
 
 
-  {%- set autresRessources = episode.ressources | excludeRessourceTypes(['livre', 'personne']) %}
+  {%- set autresRessources = episode.ressources | excludeRessourceTypes(['livre', 'personne', 'autre épisode']) %}
   {% if autresRessources | length > 0 %}
     <h2>{{autresRessources | length }} autres références :</h2>
     <ul>
