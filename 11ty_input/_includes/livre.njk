@@ -6,6 +6,9 @@
     {% endif %}
     {{ livre.auteurs }}
   </h3>
+  {% if livre.date_publication %}
+    <div>{{ livre.date_publication | displayDate }}</div>
+  {% endif %}
   <div class="cover-wrapper">
     <div class="thumb">
       {% if livre.livre_image %}
@@ -15,8 +18,8 @@
       {% endif %}
     </div>
     <div class="content">
-      {% if livre.description %}
-        <p>{{ livre.description }}</p>
+      {% if livre.description_courte %}
+        <p>{{ livre.description_courte }}</p>
       {% endif %}
       {% if livre.isbn %}
         <div><small>ISBN : {{ livre.isbn }}</small></div>
@@ -27,7 +30,11 @@
         </a>
       {% endif %}
       <details>
-        <summary>Cité dans {{ livre.episodes | length }} épisode(s)</summary>
+        <summary>Description complète et liste des {{ livre.episodes | length }} épisode(s) qui le citent</summary>
+        {% if livre.description %}
+          <p>{{ livre.description }}</p>
+        {% endif %}
+        Cité dans {{ livre.episodes | length }} épisode(s) :
         <ul>
           {% for episode in livre.episodes %}
             <li>

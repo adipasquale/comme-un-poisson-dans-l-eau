@@ -13,7 +13,7 @@ export default async function () {
     LEFT JOIN episodes_to_ressources ON ressources.slug = episodes_to_ressources.ressource_slug
     -- WHERE type_ressource="livre"
     GROUP BY ressources.slug
-    ORDER BY COUNT(episodes_to_ressources.episode_slug) DESC
+    ORDER BY COUNT(episodes_to_ressources.episode_slug) DESC, livre_titre ASC, titre ASC
   `)
 
   const episodes = await db.all(`
