@@ -50,6 +50,7 @@ layout: default
       {%- set foundTranscript = transcript -%}
     {%- endif -%}
   {%- endfor -%}
+
   {%- if foundTranscript -%}
     <h2>Transcription</h2>
     <details>
@@ -59,6 +60,10 @@ layout: default
       </p>
     </details>
   {%- endif -%}
+
+  <h2>Crédits</h2>
+  <p style="white-space: pre-line;">{{ episode.credits }}</p>
+  {# important not to put spaces or line break in this line #}
 
   {%- set livres = episode.ressources | selectRessourceType('livre') %}
   {% if livres | length > 0 %}
