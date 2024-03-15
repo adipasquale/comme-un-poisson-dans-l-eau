@@ -1,14 +1,11 @@
 <article class="livre" data-slug="{{ livre.slug }}">
   <h3>
-    {{ livre.livre_titre }}<br>
+    {{ livre.livre_titre }}
     {% if livre.livre_sous_titre %}
-      <i>{{ livre.livre_sous_titre }}</i><br>
+      <i>· {{ livre.livre_sous_titre }}</i>
     {% endif %}
-    {{ livre.auteurs }}
+    <span style="display: block; margin-top: 0.5rem;">{{ livre.auteurs }}</span>
   </h3>
-  {% if livre.date_publication %}
-    <div>{{ livre.date_publication | displayDate }}</div>
-  {% endif %}
   <div class="cover-wrapper">
     <div class="thumb">
       {% if livre.livre_image %}
@@ -21,8 +18,18 @@
       {% if livre.description_courte %}
         <p>{{ livre.description_courte }}</p>
       {% endif %}
-      {% if livre.isbn %}
-        <div><small>ISBN : {{ livre.isbn }}</small></div>
+      {% if livre.isbn or livre.date_publication %}
+        <p>
+          <small>
+            {% if livre.isbn %}
+              ISBN : {{ livre.isbn }}
+            {% endif %}
+            {% if livre.isbn and livre.date_publication %}·{% endif %}
+            {% if livre.date_publication %}
+              publié le  {{ livre.date_publication | displayDate }}
+            {% endif %}
+          </small>
+        </p>
       {% endif %}
       {% if r/.*placedeslibraires.*/.test(livre.url)  %}
         <a href="{{ livre.url }}" target="_blank">
